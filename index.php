@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Author: Ghorri
+ * author: Salek
  * Autoload Classes
  */
 
@@ -44,7 +44,9 @@ spl_autoload_register('autoloadClass');
 
 switch ($_GET['model']) {
     case 'subscriber':
-        # code...
+    switch($_GET['subscriber']) {
+
+    }
         break;
 
     case 'subscriber_book':
@@ -66,8 +68,16 @@ switch ($_GET['model']) {
                     BookController::new($_POST);
                     break;
 
+                case 'create':
+                    BookController::create();
+                    break;
+
                 case 'edit':
                     BookController::edit($_GET['id']);
+                    break;
+
+                case 'update':
+                    BookController::update($_POST);
                     break;
 
                 case 'delete':

@@ -16,7 +16,9 @@ class Book extends AbstractDb {
         return $response->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public static function findById(int $id) {
+    public static function findById($id) {
+
+        var_dump('test');
 
         $bdd = self::connectDb();
 
@@ -26,4 +28,28 @@ class Book extends AbstractDb {
 
         return $response->fetch(PDO::FETCH_ASSOC);
     }
+
+    public static function new($params) {
+
+        $bdd = self::connectDb();
+        
+        $request =$bdd->prepare( 'INSERT INTO book (title,author) VALUES (:title,:author)');
+        $request->execute(array(
+            'title'=>$params['title'],
+            'author'=>$params['author']
+        ));
+        echo 'Le livre est ajouté :GOOD!';
+    }
+    public static function update($params) {
+
+        $bdd = self::connectDb();
+        
+        $request =$bdd->prepare( 'UPDATE book (title,author) VALUES (:title,:author)');
+        $request->execute(array(
+            'title'=>$params['title'],
+            'author'=>$params['author']
+        ));
+        echo 'Le livre est modifié :GOOD!';
+    }
+ 
 }
