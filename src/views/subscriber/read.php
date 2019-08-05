@@ -11,10 +11,10 @@
   </head>
   <body>
 
-        <h1>Voilà le subscriber: </h1>
+        <h1>Voici le livre : </h1>
 
         <?php 
-        var_dump($subscriber); 
+        var_dump($book); 
         
         ?>
     <!-- Optional JavaScript -->

@@ -13,8 +13,8 @@
 
 <body>
 
-    <?php foreach ($subscribers as $subscriber) : ?>
-        <?= $subscriber['firstname'] ?> <br>
+    <?php foreach ($books as $book) : ?>
+        <?= $book['title'] ?> <br>
     <?php endforeach; ?>
 
 

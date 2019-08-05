@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>micro-mvc</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,14 +9,24 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <style>
+    form
+    {
+        text-align:center;
+    }
+    </style>
+    <body class="p-5">
 
-        <h1>Voilà le subscriber: </h1>
+    <h1 class="text-light bg-info">Ajouter un livre</h1>
 
-        <?php 
-        var_dump($subscriber); 
-        
-        ?>
+    <form action="index.php?model=book&method=new" method="post" >
+        <div>
+        <label for="title">Title</label> : <input type="text" name="title" id="title" /><br />
+        <label for="author">Author</label> :  <input type="text" name="author" id="author" /><br />
+        <button type="submit" class="btn btn-success ">Envoyer</a></button>
+
+      </div>
+    </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

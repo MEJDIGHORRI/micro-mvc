@@ -11,10 +11,10 @@
   </head>
   <body>
         <h1>Voici le livre : </h1>
-        <?php var_dump($book); ?>
-    <form action="index.php?model=book&method=todelete&id=<?= $book['id'] ?>" method="post" >
+        <?php var_dump($subscriber); ?>
+    <form action="index.php?model=subscriber&method=todelete&id=<?= $book['id'] ?>" method="post" >
         <div>
-        <input type="submit" value="Supprimer"/>
+        <button type="submit" class="btn btn-danger ">Supprimer</a></button>
       </div>
     </form>
 

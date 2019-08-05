@@ -17,14 +17,14 @@
     </style>
     <body class="p-5">
 
-    <h1 class="text-light bg-warning">Ajouter un livre</h1>
+    <h1 class="text-light bg-info">Ajouter un subscriber</h1>
 
-    <form action="index.php?model=book&method=new" method="post" >
+    <form action="index.php?model=subscriber&method=new" method="post" >
         <div>
-        <label for="title">Title</label> : <input type="text" name="title" id="title" /><br />
-        <label for="author">Author</label> :  <input type="text" name="author" id="author" /><br />
+        <label for="firstname">Firstname</label> : <input type="text" name="firstname" id="firstname" /><br />
+        <label for="lastname">Lastname</label> :  <input type="text" name="lastname" id="lastname" /><br />
+        <button type="submit" class="btn btn-success ">Envoyer</a></button>
 
-        <input type="submit" value="Envoyer"/>
       </div>
     </form>
     <!-- Optional JavaScript -->
