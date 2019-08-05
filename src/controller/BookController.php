@@ -55,9 +55,9 @@ class BookController {
         include(__DIR__ . '/../views/books/delete.php');
 
     }
-    public static function deleted($id) {
-        // traitement du formulaire qui vient de BookController::edit
-        Book::update($id); 
+    public static function todelete($id) {
+        // traitement du formulaire qui vient de BookController::delete
+        Book::todelete($id); 
         echo"le livre est supprimé avec succés"; 
     }
 

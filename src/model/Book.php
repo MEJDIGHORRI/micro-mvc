@@ -18,8 +18,6 @@ class Book extends AbstractDb {
 
     public static function findById($id) {
 
-        var_dump('test');
-
         $bdd = self::connectDb();
 
         $request = 'SELECT * FROM book WHERE id = ' . $id;
@@ -51,5 +49,12 @@ class Book extends AbstractDb {
         ));
         echo 'Le livre est modifié :GOOD!';
     }
- 
+    public static function todelete($id) {
+
+        $bdd = self::connectDb();
+
+        $request = 'DELETE FROM cars WHERE id ="{$id}" LIMIT 1';
+
+        $response = $bdd->query($request);
+    }
 }

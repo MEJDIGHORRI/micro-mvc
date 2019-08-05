@@ -12,7 +12,7 @@
   <body>
         <h1>Voici le livre : </h1>
         <?php var_dump($book); ?>
-    <form action="index.php?model=book&method=update&id=<?= $book['id'] ?>" method="post" >
+    <form action="index.php?model=book&method=todelete&id=<?= $book['id'] ?>" method="post" >
         <div>
         <input type="submit" value="Supprimer"/>
       </div>

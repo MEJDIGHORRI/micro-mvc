@@ -83,6 +83,9 @@ switch ($_GET['model']) {
                 case 'delete':
                     BookController::delete($_GET['id']);
                     break;
+                case 'todelete':
+                    BookController::todelete($_POST);
+                break;                    
             }
         break;
 
