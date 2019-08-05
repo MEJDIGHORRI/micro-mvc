@@ -5,7 +5,7 @@ abstract class AbstractDb {
     const DB_HOST = '127.0.0.1';
     const DB_PORT = '3306';
     const DB_USER = 'root';
-    const DB_PSWD = 'poeteftn67';
+    const DB_PSWD = 'Mejdi2019.';
 
     protected static function connectDb() {
         try {
